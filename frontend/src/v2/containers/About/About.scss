@@ -1,0 +1,58 @@
+.app__about{
+    flex:1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.app__profiles{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.app__profile-item {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    h3{
+        color: var(--secondary-color);
+        font-weight: 500;
+
+    }
+    p{
+        font-size: 1rem;
+        font-weight: 5  00;
+    }
+    img{
+        width: 30%;
+        object-fit: cover;
+    }
+
+    @media screen and (min-width: 2000px) {
+        width: 370px;
+        margin: 2rem 4rem;
+
+        img{
+            height: 320px;
+        }
+    }
+    @media screen and (max-width: 835px) {
+        width: 70%;
+    }
+    @media screen and (max-width: 600px) {
+        width: 80%;
+        img{
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 330px) {
+        width: 100%;
+        margin: 2rem 0.5rem;
+        img{
+            width: 70%;
+        }
+    }
+}
