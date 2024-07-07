@@ -10,7 +10,6 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [showVersion, setShowVersion] = useState(false);
   const versions =["2.0.1", "1.0.3"];
-  const url = "http://localhost:3000";
 
   return (
     <nav className='app__navbar'>
@@ -51,7 +50,7 @@ const Navbar = () => {
             <ul>
               {versions.map((item) => (
                 <li key={`link-${item}`} className='p-text'>
-                  <Link to={item === "1.0.3" ? `${url}/v1/` : `${url}`}>{item}</Link>
+                  <Link to={item === "1.0.3" ? `/v1/` : `/`}>{item}</Link>
                 </li>
               ))}
             </ul>
