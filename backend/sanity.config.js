@@ -6,7 +6,6 @@ import {schemas} from './schemas'
 export default defineConfig({
   name: 'default',
   title: 'portfolio_backend',
-
   projectId: 'bj75xn58',
   dataset: 'production',
 
