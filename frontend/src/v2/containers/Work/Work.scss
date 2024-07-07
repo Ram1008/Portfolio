@@ -56,12 +56,11 @@
         color: #000;
         cursor: pointer;
         transition: all 0.3s ease;
-        @media (hover:hover) {
+        
             &:hover{
                 box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2);
     
             }
-        }
         
         @media screen and (min-width: 2000px) {
             width: 470px;
@@ -126,8 +125,10 @@
             columns: var(--white-color);
         }
     }
+    @media (hover: none) {
+        opacity: 1 !important;
+      }
 }
-
 .app__work-content{
     padding: 0.5rem;
     width: 100%;
