@@ -7,6 +7,7 @@ import sassIcon from '../../assets/sassIcon.png';
 import myPhoto2 from '../../assets/myPhoto2.png';
 import blackBeltCertificate from '../../assets/blackBeltCertificate.jpg';
 import thumbnailBealFoundation from '../../assets/thumbnailBealFoundation.svg';
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     logo,
     profilePhoto,
