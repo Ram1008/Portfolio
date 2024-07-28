@@ -4,27 +4,31 @@ import { client } from '../../../client';
 import './Footer.scss';
 import { IoIosMail } from "react-icons/io";
 import { FaMobile } from "react-icons/fa";
+import emailjs from 'emailjs-com';
+import { toast } from 'react-toastify';
 
 const Footer = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ username: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const { username, email, message } = formData;
 
   const handleChangeInput = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setLoading(true);
 
     const contact = {
       _type: 'contact',
-      name: formData.username,
-      email: formData.email,
-      message: formData.message,
+      name: username,
+      email: email,
+      message: message,
     };
 
     client.create(contact)
@@ -33,12 +37,30 @@ const Footer = () => {
         setIsFormSubmitted(true);
       })
       .catch((err) => console.log(err));
+
+      const templateParams = {
+        from_name: contact.name,
+        from_email: contact.email,
+        message: contact.message,
+      };
+      setLoading(true);
+      emailjs.send('service_rx2fgjb', 'template_empatzr', templateParams, 'IR8mmuURfstZEi51Q')
+      .then((response) => {
+        setLoading(false);
+        toast.success("Got your message, Thanks!", {
+          autoClose: 3000
+        });
+      }, (error) => {
+        setLoading(false);
+        toast.error("Oops! Please try again.", {
+          autoClose: 3000
+        });
+      });
   };
 
   return (
     <>
       <h2 className="head-text">Gratitude in every byte – let's thrive together!</h2>
-
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <IoIosMail />

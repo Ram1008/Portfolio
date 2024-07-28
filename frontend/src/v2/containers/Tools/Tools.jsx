@@ -10,7 +10,7 @@ const Tools = () => {
     const [tools, setTools] = useState([]);
     const navigate = useNavigate();
     const handleClick = () =>{
-        navigate('/password-lookup');
+        navigate('/v1/password-lookup');
     }
     useEffect(() => {
         const query = '*[_type == "tools"]';
