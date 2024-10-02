@@ -3,7 +3,7 @@
     font-family: var(--font-base);
   }
   
-  .app__whitebg {
+  .app__whitebg { 
     background-color: var(--white-color);
   }
   
@@ -14,9 +14,10 @@
   .app__container {
     width: 100%;
     min-height: 100vh;
-  
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
   
   .app__flex {
@@ -30,11 +31,7 @@
     width: 100%;
     flex-direction: column;
     padding: 2rem 2rem;
-    // div{
-    //   position: absolute;
-    //   bottom: 2rem;
-    //   right: 2rem;
-    // }
+
     @media screen and (max-width: 450px) {
       padding: 4rem 1rem 2rem;
     }
@@ -76,13 +73,13 @@
   }
   
   .p-text {
-    font-size: 0.8rem;
+    font-size: 16px;
     text-align: left;
     color: var(--gray-color);
     line-height: 1.5;
   
     @media screen and (min-width: 2000px) {
-      font-size: 1.75rem;
+      font-size: 18px;
     }
   }
   
@@ -106,6 +103,7 @@
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
   
     padding: 1rem;
   

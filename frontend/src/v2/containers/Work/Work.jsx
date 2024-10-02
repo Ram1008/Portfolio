@@ -35,7 +35,7 @@ const Work = () => {
   }, []);
 
   return (
-    <>
+    <div className='app__work'>
       <div className='app__work-filter'>
         {['Web Apps', 'Web Designs', 'ML', 'All'].map((item, index) => (
           <div
@@ -97,7 +97,7 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
-    </>
+    </div>
   );
 };
 

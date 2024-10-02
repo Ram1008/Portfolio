@@ -15,7 +15,7 @@ const scaleVarients = {
 }
 const Header = () => {
   return (
-    <div className='app__header app__flex'>
+    <div className='app__container'>
       <motion.div
         whileInView = {{x: [-100, 0], opacity: [0,1]}}
         transition = {{duration: 0.5}}
@@ -30,8 +30,8 @@ const Header = () => {
             </div>
           </div>
           <div className='tag-cmp app__flex'>
+            <p className='p-text'>Engineer Designer</p>
             <p className='p-text'>Web Developer</p>
-            <p className='p-text'>Designer</p>
             <p className='p-text'>Freelancer</p>
             <p className='p-text'>Seeker</p>
 
@@ -44,13 +44,8 @@ const Header = () => {
         className = "app__header-img"
       >
         <div>
-          <img src = {images.myPhoto2} alt = "profile_bg"/>
+          <img src = {images.profilePhoto} alt = "profile_bg"/>
         </div>
-        <motion.div
-          whileInView={{ scale: [0,1] }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          className = "overlay_circle"
-        />
 
       </motion.div>
       <motion.div
