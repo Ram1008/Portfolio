@@ -4,6 +4,7 @@ import Styles from "./About.module.css";
 import SchoolLogo from '../../assets/schoolLogo.png';
 import CollegeLogo from '../../assets/collegeLogo.png';
 import {achivements} from '../data/AboutData';
+
 const About = () => {
   return (
     <div className={Styles.container}>  

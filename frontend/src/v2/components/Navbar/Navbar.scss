@@ -10,28 +10,29 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 2;
+
     @media screen and (max-width: 350px) {
         padding: 1.5rem 0;
     }
-    @media screen and (max-width: 305px) {
-        padding: 1.5rem 0;
-    }
-}
-.app__navbar-logo{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 
-    img{
-        width: 60px;
-        height: 30px;
-        border-radius: 25px;
-        @media screen and (min-width: 2000px) {
-            width: 180px;
-            height: 40px
+    .app__navbar-logo{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    
+        img{
+            width: 60px;
+            height: 30px;
+            border-radius: 25px;
+            margin-left: 1rem ;
+            @media screen and (min-width: 2000px) {
+                width: 180px;
+                height: 40px
+            }
         }
     }
 }
+
 .app__navbar-links {
     flex: 1;
     display: flex;
@@ -150,6 +151,7 @@
     justify-content: center;
     align-items: center;
     background: var(--secondary-color);
+    margin-right: 1rem;
 
     svg{
         width: 70%;

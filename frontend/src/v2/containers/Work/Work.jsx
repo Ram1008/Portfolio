@@ -37,7 +37,7 @@ const Work = () => {
   return (
     <div className='app__work'>
       <div className='app__work-filter'>
-        {['Web Apps', 'Web Designs', 'ML', 'All'].map((item, index) => (
+        {['All', 'Web Apps', 'Web Designs', 'ML' ].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -54,8 +54,8 @@ const Work = () => {
         className='app__work-portfolio'
       >
         {filterWork.map((work, index) => (
-          <div className='app__work-item app__flex' key={index}>
-            <div className='app__work-img app__flex'>
+          <div className='app__work-item ' key={index}>
+            <div className='app__work-img '>
               <img src={urlFor(work.imgUrl)} alt={work.name} />
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
