@@ -131,6 +131,14 @@
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+    @media screen and (max-width: 600px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 90%;
+    }
   }
   .app__testimonial-add-btn{
     padding: 0.5rem 1rem;
